@@ -1,7 +1,7 @@
 # Учебный проект «Код и Магия» [![Build status][travis-image]][travis-url]
 
 * Студент: [Андрей Филиппов](https://up.htmlacademy.ru/javascript/19/user/1145499).
-* Наставник: [Евгений Самойленко] (https://htmlacademy.ru/profile/id999539).
+* Наставник: [Евгений Самойленко](https://htmlacademy.ru/profile/id999539).
 
 ---
 
