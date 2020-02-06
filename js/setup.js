@@ -17,14 +17,16 @@ var randomInteger = function (min, max) {
 };
 
 for (var i = 0; i < MAX_WIZARDS; i++) {
-  wizards[i] = {};
+
   var randomIndexFullName = randomInteger(0, WIZARD_NAMES.length);
   var randomIndexCoatColor = randomInteger(0, COAT_COLORS.length);
   var randomIndexEyesColor = randomInteger(0, EYES_COLORS.length);
 
-  wizards[i].name = WIZARD_NAMES[randomIndexFullName] + ' ' + WIZARD_SURNAMES[randomIndexFullName];
-  wizards[i].coatColor = COAT_COLORS[randomIndexCoatColor];
-  wizards[i].eyesColor = EYES_COLORS[randomIndexEyesColor];
+  wizards[i] = {
+    name: WIZARD_NAMES[randomIndexFullName] + ' ' + WIZARD_SURNAMES[randomIndexFullName],
+    coatColor: COAT_COLORS[randomIndexCoatColor],
+    eyesColor: EYES_COLORS[randomIndexEyesColor]
+  };
 
   // получение уникальных значений методом "швейцарского" ножа:)
   WIZARD_NAMES.splice(randomIndexFullName, 1);
