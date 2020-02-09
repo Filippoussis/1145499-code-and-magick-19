@@ -36,8 +36,6 @@ for (var i = 0; i < MAX_WIZARDS; i++) {
   // получение уникальных значений методом "швейцарского" ножа:)
   WIZARD_NAMES.splice(randomIndexFullName, 1);
   WIZARD_SURNAMES.splice(randomIndexFullName, 1);
-  // COAT_COLORS.splice(randomIndexCoatColor, 1);
-  // EYES_COLORS.splice(randomIndexEyesColor, 1);
 }
 
 var similarListElement = document.querySelector('.setup-similar-list');
@@ -68,7 +66,6 @@ var onPopupEscPress = function (evt) {
 
 var openPopup = function () {
   setup.classList.remove('hidden');
-
   document.addEventListener('keydown', onPopupEscPress);
 };
 
@@ -77,9 +74,7 @@ var closePopup = function () {
   document.removeEventListener('keydown', onPopupEscPress);
 };
 
-setupOpen.addEventListener('click', function () {
-  openPopup();
-});
+setupOpen.addEventListener('click', openPopup);
 
 setupOpen.addEventListener('keydown', function (evt) {
   if (evt.key === ENTER_KEY) {
@@ -87,9 +82,7 @@ setupOpen.addEventListener('keydown', function (evt) {
   }
 });
 
-setupClose.addEventListener('click', function () {
-  closePopup();
-});
+setupClose.addEventListener('click', closePopup);
 
 setupClose.addEventListener('keydown', function (evt) {
   if (evt.key === ENTER_KEY) {
